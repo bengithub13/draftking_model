@@ -26,11 +26,7 @@ import org.slf4j.LoggerFactory;
 import com.restproject.dao.DAOProxyFactory;
 @Entity
 @NamedQueries({
-	// if more than one address domain is returned..the owners children are returned with a full outer join and we end up getting all owners for 
-	// all zipcodes- not just owners for each address
-	//maybe the service bean will just have to format the dtos accordingly with a query on address and a seperate query on owners for each address domain.
-	@NamedQuery(name="com.restproject.domain.HomeAddress.findByZipCode",query="from HomeAddress a where a.zipCode=?"),	
-	// since we are getting unique address, the owner childrens are correctly joined.
+	@NamedQuery(name="com.restproject.domain.HomeAddress.findByName",query="from HomeAddress a where a.zipCode=?"),	
 	@NamedQuery(name="com.restproject.domain.HomeAddress.findByStreet",query="from HomeAddress a where a.street like ?"),
 	@NamedQuery(name="com.restproject.domain.HomeAddress.findAll",query="from HomeAddress a")})
 

@@ -89,7 +89,6 @@
 </bean>
 <!-- homeAddress DAO -->
 <bean id="homeAddressDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
-
 <constructor-arg type="java.lang.Class" value="com.restproject.dao.AddressDAO"></constructor-arg>
 <constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeAddress"></constructor-arg>
 <!--  
@@ -97,6 +96,12 @@
 <constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/>
 -->
 </bean>
+<bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
+<constructor-arg type="java.lang.Class" value="com.restproject.dao.HomeStatsAllYearsDAO"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeStatsAllYears"></constructor-arg>
+</bean>
+
+
 	    <bean id="homeAddressResource" class="com.restproject.resource.HomeAddressResourceImpl">
 	    </bean>
  

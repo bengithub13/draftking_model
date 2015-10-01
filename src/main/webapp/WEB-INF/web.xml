@@ -3,20 +3,27 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<!-- <context-param> <param-name>contextConfigLocation</param-name> <param-value>/WEB-INF/applicationcontext.xml</param-value> 
-		</context-param> <listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
-		</listener> <servlet> <servlet-name>CXFServlet</servlet-name> <servlet-class> 
+	 <context-param> 
+	 <param-name>contextConfigLocation</param-name> 
+	 <param-value>/WEB-INF/applicationcontext.xml</param-value> 
+		</context-param> 
+		<listener> 
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
+		</listener> 
+		<servlet> 
+		<servlet-name>CXFServlet</servlet-name> 
+		<servlet-class> 
 		org.apache.cxf.transport.servlet.CXFServlet </servlet-class> <load-on-startup>1</load-on-startup> 
 		</servlet> <servlet-mapping> <servlet-name>CXFServlet</servlet-name> <url-pattern>/services/*</url-pattern> 
-		</servlet-mapping> ! -->
+		</servlet-mapping> 
 
-	<display-name>Spring MVC Application</display-name>
+	<display-name>Draftking Application</display-name>
 
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml,/WEB-INF/securitycontext.xml</param-value>
-		
+		<!-- param-value>/WEB-INF/mvc-dispatcher-servlet.xml,/WEB-INF/securitycontext.xml</param-value-->
+		<param-value>/WEB-INF/applicationcontext.xml,/WEB-INF/securitycontext.xml</param-value>
 	</context-param>
 
 	<!-- Enables Spring Security -->
@@ -78,6 +85,8 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	<!-- 
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>
@@ -91,7 +100,7 @@
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/services/springmvc/*</url-pattern>
 	</servlet-mapping>
-
+-->
 <!--  these are local application references to the global jndi's so that you can deploy the same application to different servers and point to 2 different resources if needed
 - this allows your application to references different global defined jndis  -->
     <resource-ref>

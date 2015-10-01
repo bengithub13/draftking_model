@@ -10,6 +10,7 @@
     <class>com.restproject.domain.Country</class>
     <class>com.restproject.domain.HomeAddress</class>
     <class>com.restproject.domain.Owner</class>
+    <class>com.restproject.domain.HomeStatsAllYears</class>
   
 
     <properties>

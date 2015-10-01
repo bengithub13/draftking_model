@@ -93,14 +93,29 @@ http://www.springframework.org/schema/security/spring-security-3.2sd">
 		<constructor-arg type="java.lang.Class"
 			value="com.restproject.domain.HomeAddress"></constructor-arg>
 		<!-- <constructor-arg name="daoInterface" value="webproject.dao.AddressDAO"/> 
-			<constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/> -->
+			<constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/--> 
 	</bean>
+
+		<bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory"
+		factory-method="newInstance" destroy-method="cleanup">
+
+		<constructor-arg type="java.lang.Class" value="com.restproject.dao.HomeStatsAllYearsDAO"></constructor-arg>
+		<constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeStatsAllYears"></constructor-arg> 
+	</bean>
+	
+
+
 	<bean id="homeAddressResource" class="com.restproject.resource.HomeAddressResourceImpl">
 	</bean>
+    <bean id="playerHomeStatsResource" class="com.restproject.resource.PlayerHomeStatsResourceImpl">
+	</bean>
+
+
 
 	<jaxrs:server id="exampleCxfServer" address="/">
 		<jaxrs:serviceBeans>
 			<ref bean="homeAddressResource" />
+			<ref bean="playerHomeStatsResource" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />

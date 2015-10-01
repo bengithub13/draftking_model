@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service("messageProducer")
 public class JmsMessageSender {
  
-  @Autowired
+  //@Autowired
   private JmsTemplate jmsTemplate;
    
    
