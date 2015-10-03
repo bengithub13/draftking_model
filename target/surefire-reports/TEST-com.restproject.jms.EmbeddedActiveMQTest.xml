@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="4.387" errors="1" skipped="0" tests="1" name="com.restproject.jms.EmbeddedActiveMQTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\bin"/>
+    <property name="java.vm.version" value="24.45-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\BenPoon\git\draftking"/>
+    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\BenPoon\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8"/>
+    <property name="classworlds.conf" value="C:\Program Files\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\app\bendb3\product\12.1.0\dbhome_1\bin;C:\app\bendb2\product\12.1.0\dbhome_1\bin;C:\app\bendb1\product\12.1.0\dbhome_1\bin;C:\app\bendb\product\12.1.0\dbhome_1\bin;D:\app\bendb\product\12.1.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\maven\bin;C:\Program Files\Java\jdk1.7.0_45\binC:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Diskeeper Corporation\ExpressCache\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Users\BenPoon\AppData\Roaming\npm;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.2"/>
+    <property name="user.home" value="C:\Users\BenPoon"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="BenPoon"/>
+    <property name="java.class.path" value="C:\Program Files\maven\boot\plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_45\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher tomcat7:deploy"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_45"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="4.387" classname="com.restproject.jms.EmbeddedActiveMQTest" name="testSendMessageToDefaultDestination">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;playerHomeStatsResource&apos;: Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 47 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 49 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:638)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:282)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:445)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 60 more
+</error>
+    <system-out>2015-10-01 00:44:20 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [META-INF/mvc-dispatcher-servlet.xml]
+2015-10-01 00:44:20 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [META-INF/mvc-dispatcher-servlet.xml]
+2015-10-01 00:44:21 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2015-10-01 00:44:21 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2015-10-01 00:44:21 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@28df6d13: startup date [Thu Oct 01 00:44:21 EDT 2015]; root of context hierarchy
+2015-10-01 00:44:21 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@28df6d13: startup date [Thu Oct 01 00:44:21 EDT 2015]; root of context hierarchy
+2015-10-01 00:44:21 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [jms.properties]
+2015-10-01 00:44:21 INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from class path resource [jms.properties]
+2015-10-01 00:44:21 INFO  LocalContainerEntityManagerFactoryBean:221 - Building JPA container EntityManagerFactory for persistence unit &apos;restProjectPU&apos;
+2015-10-01 00:44:21 INFO  LocalContainerEntityManagerFactoryBean:221 - Building JPA container EntityManagerFactory for persistence unit &apos;restProjectPU&apos;
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@728cacdc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@7cad15ca
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@1cf93cb
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration character -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration char -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration integer -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration int -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@30605329
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@30605329
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@83e44f4
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@83e44f4
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration string -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration url -&gt; org.hibernate.type.UrlType@7e89481a
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@7e89481a
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration date -&gt; org.hibernate.type.DateType@372865f1
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@372865f1
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration time -&gt; org.hibernate.type.TimeType@35b102dd
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@35b102dd
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@6df23fa8
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration calendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@3be89c0f
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration locale -&gt; org.hibernate.type.LocaleType@9269e0c
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@9269e0c
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration currency -&gt; org.hibernate.type.CurrencyType@28ad1e1b
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@28ad1e1b
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@66fcb593
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@66fcb593
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration class -&gt; org.hibernate.type.ClassType@715d5504
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@715d5504
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@e8cafcc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@e8cafcc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@7e2b619
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration pg-uuid -&gt; org.hibernate.type.PostgresUUIDType@486bd255
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration binary -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration [B -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration image -&gt; org.hibernate.type.ImageType@592b8638
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration characters -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:21 DEBUG BasicTypeRegistry:147 - Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration [C -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration text -&gt; org.hibernate.type.TextType@77c9912f
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration blob -&gt; org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@5e5c659
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_materialized_blob -&gt; org.hibernate.type.WrappedMaterializedBlobType@6b09d5f2
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration clob -&gt; org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@41a1cf27
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_characters_clob -&gt; org.hibernate.type.CharacterArrayClobType@63450f7c
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration characters_clob -&gt; org.hibernate.type.PrimitiveCharacterArrayClobType@3160c0bd
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration serializable -&gt; org.hibernate.type.SerializableType@1ce89199
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration object -&gt; org.hibernate.type.ObjectType@485266e0
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@485266e0
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@165aa2b2
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@186f5f95
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@37ec3bbb
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@76458eab
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@5099b936
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@1c4eb191
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@726bb51b
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@7d3f3a4c
+2015-10-01 00:44:22 INFO  Ejb3Configuration:523 - Processing PersistenceUnitInfo [
+	name: restProjectPU
+	...]
+2015-10-01 00:44:22 INFO  AnnotationBinder:532 - Binding entity from annotated class: com.restproject.domain.Country
+2015-10-01 00:44:22 INFO  EntityBinder:530 - Bind entity com.restproject.domain.Country on table country
+2015-10-01 00:44:22 INFO  AnnotationBinder:532 - Binding entity from annotated class: com.restproject.domain.HomeAddress
+2015-10-01 00:44:22 INFO  QueryBinder:251 - Binding named query: com.restproject.domain.HomeAddress.findByName =&gt; from HomeAddress a where a.zipCode=?
+2015-10-01 00:44:22 INFO  QueryBinder:251 - Binding named query: com.restproject.domain.HomeAddress.findByStreet =&gt; from HomeAddress a where a.street like ?
+2015-10-01 00:44:22 INFO  QueryBinder:251 - Binding named query: com.restproject.domain.HomeAddress.findAll =&gt; from HomeAddress a
+2015-10-01 00:44:22 INFO  EntityBinder:530 - Bind entity com.restproject.domain.HomeAddress on table address
+2015-10-01 00:44:22 INFO  AnnotationBinder:532 - Binding entity from annotated class: com.restproject.domain.Owner
+2015-10-01 00:44:22 INFO  EntityBinder:530 - Bind entity com.restproject.domain.Owner on table owner
+2015-10-01 00:44:22 INFO  AnnotationBinder:532 - Binding entity from annotated class: com.restproject.domain.HomeStatsAllYears
+2015-10-01 00:44:22 INFO  QueryBinder:251 - Binding named query: com.restproject.domain.HomeStatsAllYears.findByPlayer =&gt; from HomeStatsAllYears a where a.player=?
+2015-10-01 00:44:22 INFO  QueryBinder:251 - Binding named query: com.restproject.domain.HomeStatsAllYears.findAllPlayers =&gt; from HomeStatsAllYears a
+2015-10-01 00:44:22 INFO  EntityBinder:530 - Bind entity com.restproject.domain.HomeStatsAllYears on table HOME_STATS_ALL_YEARS_VIEW_2
+2015-10-01 00:44:22 INFO  CollectionBinder:762 - Mapping collection: com.restproject.domain.Country.homeAddresses -&gt; address
+2015-10-01 00:44:22 INFO  Configuration:1676 - Hibernate Validator not found: ignoring
+2015-10-01 00:44:22 INFO  HibernateSearchEventListenerRegister:75 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2015-10-01 00:44:22 INFO  ConnectionProviderFactory:173 - Initializing connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+2015-10-01 00:44:22 INFO  InjectedDataSourceConnectionProvider:62 - Using provided datasource
+2015-10-01 00:44:22 INFO  Dialect:135 - Using dialect: org.hibernate.dialect.Oracle10gDialect
+2015-10-01 00:44:22 INFO  SettingsFactory:126 - Database -&gt;
+       name : Oracle
+    version : Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+      major : 11
+      minor : 2
+2015-10-01 00:44:22 INFO  SettingsFactory:132 - Driver -&gt;
+       name : Oracle JDBC driver
+    version : 11.2.0.4.0
+      major : 11
+      minor : 2
+2015-10-01 00:44:22 INFO  TransactionFactoryFactory:62 - Using default transaction strategy (direct JDBC transactions)
+2015-10-01 00:44:22 INFO  TransactionManagerLookupFactory:83 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2015-10-01 00:44:22 INFO  SettingsFactory:179 - Automatic flush during beforeCompletion(): disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:183 - Automatic session close at end of transaction: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:190 - JDBC batch size: 15
+2015-10-01 00:44:22 INFO  SettingsFactory:193 - JDBC batch updates for versioned data: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:198 - Scrollable result sets: enabled
+2015-10-01 00:44:22 INFO  SettingsFactory:206 - JDBC3 getGeneratedKeys(): disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:214 - Connection release mode: auto
+2015-10-01 00:44:22 INFO  SettingsFactory:241 - Default batch fetch size: 1
+2015-10-01 00:44:22 INFO  SettingsFactory:245 - Generate SQL with comments: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:249 - Order SQL updates by primary key: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:253 - Order SQL inserts for batching: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:431 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2015-10-01 00:44:22 INFO  ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+2015-10-01 00:44:22 INFO  SettingsFactory:261 - Query language substitutions: {}
+2015-10-01 00:44:22 INFO  SettingsFactory:266 - JPA-QL strict compliance: enabled
+2015-10-01 00:44:22 INFO  SettingsFactory:271 - Second-level cache: enabled
+2015-10-01 00:44:22 INFO  SettingsFactory:275 - Query cache: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:406 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2015-10-01 00:44:22 INFO  SettingsFactory:285 - Optimize cache for minimal puts: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:294 - Structured second-level cache entries: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:323 - Statistics: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:327 - Deleted entity synthetic identifier rollback: disabled
+2015-10-01 00:44:22 INFO  SettingsFactory:343 - Default entity-mode: pojo
+2015-10-01 00:44:22 INFO  SettingsFactory:347 - Named query checking : enabled
+2015-10-01 00:44:22 INFO  SettingsFactory:351 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2015-10-01 00:44:22 INFO  SessionFactoryImpl:202 - building session factory
+2015-10-01 00:44:22 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.impl.SessionFactoryImpl@5130c3da
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Boolean -&gt; org.hibernate.type.BooleanType@6f81f3d1
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration numeric_boolean -&gt; org.hibernate.type.NumericBooleanType@728cacdc
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration true_false -&gt; org.hibernate.type.TrueFalseType@7cad15ca
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration yes_no -&gt; org.hibernate.type.YesNoType@1cf93cb
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Byte -&gt; org.hibernate.type.ByteType@5aafb9e5
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration character -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration char -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Character -&gt; org.hibernate.type.CharacterType@1cb6847f
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Short -&gt; org.hibernate.type.ShortType@16c5b11a
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration integer -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration int -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Integer -&gt; org.hibernate.type.IntegerType@42f12760
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Long -&gt; org.hibernate.type.LongType@2ea31991
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Float -&gt; org.hibernate.type.FloatType@7a9da471
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Double -&gt; org.hibernate.type.DoubleType@42ee791d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration big_decimal -&gt; org.hibernate.type.BigDecimalType@30605329
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.math.BigDecimal -&gt; org.hibernate.type.BigDecimalType@30605329
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration big_integer -&gt; org.hibernate.type.BigIntegerType@83e44f4
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.math.BigInteger -&gt; org.hibernate.type.BigIntegerType@83e44f4
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration string -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.String -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration url -&gt; org.hibernate.type.UrlType@7e89481a
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.net.URL -&gt; org.hibernate.type.UrlType@7e89481a
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration date -&gt; org.hibernate.type.DateType@372865f1
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Date -&gt; org.hibernate.type.DateType@372865f1
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration time -&gt; org.hibernate.type.TimeType@35b102dd
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Time -&gt; org.hibernate.type.TimeType@35b102dd
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration timestamp -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Timestamp -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Date -&gt; org.hibernate.type.TimestampType@21e17c6d
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration dbtimestamp -&gt; org.hibernate.type.DbTimestampType@6df23fa8
+2015-10-01 00:44:22 DEBUG BasicTypeRegistry:147 - Adding type registration calendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Calendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.GregorianCalendar -&gt; org.hibernate.type.CalendarType@2457c24c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration calendar_date -&gt; org.hibernate.type.CalendarDateType@3be89c0f
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration locale -&gt; org.hibernate.type.LocaleType@9269e0c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Locale -&gt; org.hibernate.type.LocaleType@9269e0c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration currency -&gt; org.hibernate.type.CurrencyType@28ad1e1b
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.Currency -&gt; org.hibernate.type.CurrencyType@28ad1e1b
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration timezone -&gt; org.hibernate.type.TimeZoneType@66fcb593
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.TimeZone -&gt; org.hibernate.type.TimeZoneType@66fcb593
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration class -&gt; org.hibernate.type.ClassType@715d5504
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Class -&gt; org.hibernate.type.ClassType@715d5504
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration uuid-binary -&gt; org.hibernate.type.UUIDBinaryType@e8cafcc
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.util.UUID -&gt; org.hibernate.type.UUIDBinaryType@e8cafcc
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration uuid-char -&gt; org.hibernate.type.UUIDCharType@7e2b619
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration pg-uuid -&gt; org.hibernate.type.PostgresUUIDType@486bd255
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration binary -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration byte[] -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration [B -&gt; org.hibernate.type.BinaryType@75a7afb7
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper-binary -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration Byte[] -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration [Ljava.lang.Byte; -&gt; org.hibernate.type.WrapperBinaryType@457fe7dc
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration image -&gt; org.hibernate.type.ImageType@592b8638
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration characters -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration char[] -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration [C -&gt; org.hibernate.type.CharArrayType@2a6434d2
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper-characters -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration [Ljava.lang.Character; -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration Character[] -&gt; org.hibernate.type.CharacterArrayType@2d6ff346
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration text -&gt; org.hibernate.type.TextType@77c9912f
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration blob -&gt; org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@5e5c659
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_materialized_blob -&gt; org.hibernate.type.WrappedMaterializedBlobType@6b09d5f2
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration clob -&gt; org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@41a1cf27
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_characters_clob -&gt; org.hibernate.type.CharacterArrayClobType@63450f7c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration characters_clob -&gt; org.hibernate.type.PrimitiveCharacterArrayClobType@3160c0bd
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration serializable -&gt; org.hibernate.type.SerializableType@1ce89199
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration object -&gt; org.hibernate.type.ObjectType@485266e0
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.lang.Object -&gt; org.hibernate.type.ObjectType@485266e0
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_date -&gt; org.hibernate.type.AdaptedImmutableType@588a46da
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_time -&gt; org.hibernate.type.AdaptedImmutableType@5e31bf9f
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_timestamp -&gt; org.hibernate.type.AdaptedImmutableType@141b9009
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_dbtimestamp -&gt; org.hibernate.type.AdaptedImmutableType@1d8d492f
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_calendar -&gt; org.hibernate.type.AdaptedImmutableType@26bfbbd1
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_calendar_date -&gt; org.hibernate.type.AdaptedImmutableType@75c3aa36
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_binary -&gt; org.hibernate.type.AdaptedImmutableType@dbfba1
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration imm_serializable -&gt; org.hibernate.type.AdaptedImmutableType@6a650777
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_materialized_blob -&gt; org.hibernate.type.WrappedMaterializedBlobType@619e65ae
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@6b09d5f2
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration clob -&gt; org.hibernate.type.ClobType@6625b493
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [clob] overrides previous : org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Clob -&gt; org.hibernate.type.ClobType@6625b493
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@758fd559
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration blob -&gt; org.hibernate.type.BlobType@1d194c1a
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [blob] overrides previous : org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration java.sql.Blob -&gt; org.hibernate.type.BlobType@1d194c1a
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@51a21699
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_clob -&gt; org.hibernate.type.MaterializedClobType@35725349
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@41a1cf27
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration wrapper_characters_clob -&gt; org.hibernate.type.CharacterArrayClobType@64b9f908
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@63450f7c
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration materialized_blob -&gt; org.hibernate.type.MaterializedBlobType@67d34de2
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@5e5c659
+2015-10-01 00:44:23 DEBUG BasicTypeRegistry:147 - Adding type registration characters_clob -&gt; org.hibernate.type.PrimitiveCharacterArrayClobType@6d8cafe1
+2015-10-01 00:44:23 INFO  BasicTypeRegistry:150 - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@3160c0bd
+2015-10-01 00:44:23 INFO  SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+2015-10-01 00:44:23 TRACE QueryPlanCache:122 - unable to locate HQL query plan in cache; generating (from HomeAddress a where a.street like ?)
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:272 - parse() - HQL: from com.restproject.domain.HomeAddress a where a.street like ?
+2015-10-01 00:44:23 TRACE HqlParser:89 - -&gt; statement
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---&gt; selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----&gt; queryRule
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; fromClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; fromRange
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; path
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; asAlias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; alias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- alias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- asAlias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- fromRange
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- fromClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; whereClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; expression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------&gt; relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; likeEscape
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- likeEscape
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------- relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- expression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- whereClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----- queryRule
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:291 - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    +-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+    |  \-[FROM] Node: &apos;from&apos;
+    |     \-[RANGE] Node: &apos;RANGE&apos;
+    |        +-[DOT] Node: &apos;.&apos;
+    |        |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  |  +-[IDENT] Node: &apos;com&apos;
+    |        |  |  |  \-[IDENT] Node: &apos;restproject&apos;
+    |        |  |  \-[IDENT] Node: &apos;domain&apos;
+    |        |  \-[IDENT] Node: &apos;HomeAddress&apos;
+    |        \-[ALIAS] Node: &apos;a&apos;
+    \-[WHERE] Node: &apos;where&apos;
+       \-[LIKE] Node: &apos;like&apos;
+          +-[DOT] Node: &apos;.&apos;
+          |  +-[IDENT] Node: &apos;a&apos;
+          |  \-[IDENT] Node: &apos;street&apos;
+          \-[PARAM] Node: &apos;?&apos;
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -&gt; statement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---&gt; selectStatement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----&gt; query (query [QUERY])
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:111 - select &lt;&lt; begin [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; fromClause (from [FROM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; fromElementList (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; fromElement (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; path (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; identifier (restproject [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; identifier (domain [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; identifier (HomeAddress [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- path
+2015-10-01 00:44:23 DEBUG FromElement:157 - FromClause{level=1} :  com.restproject.domain.HomeAddress (a) -&gt; homeaddres0_
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- fromElement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- fromElementList
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- fromClause
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; whereClause (where [WHERE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; logicalExpr (like [LIKE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; comparisonExpr (like [LIKE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; exprOrSubquery (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; expr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; addrExpr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; addrExprLhs (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; addrExpr (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------------&gt; identifier (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------------- identifier
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a -&gt; homeaddres0_.ID
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- addrExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- addrExprLhs
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; propertyName (street [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (street [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- propertyName
+2015-10-01 00:44:23 TRACE FromElement:626 - handling property dereference [com.restproject.domain.HomeAddress (a) -&gt; street (class)]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 DEBUG DotNode:613 - getDataType() : street -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a.street -&gt; homeaddres0_.street
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- exprOrSubquery
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- parameter
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- comparisonExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- logicalExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- whereClause
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:117 - select : finishing up [level=1, statement=select]
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:625 - processQuery() :  ( SELECT ( FromClause{level=1} address homeaddres0_ ) ( where ( like ( homeaddres0_.street homeaddres0_.ID street ) ? ) ) )
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:868 - Derived SELECT clause created.
+2015-10-01 00:44:23 DEBUG JoinProcessor:179 - Using FROM fragment [address homeaddres0_]
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:123 - select &gt;&gt; end [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----- query
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:258 - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (address)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;homeaddres0_.ID as ID10_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_&apos;
+    +-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[a], fromElementByTableAlias=[homeaddres0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: &apos;address homeaddres0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}
+    \-[WHERE] SqlNode: &apos;where&apos;
+       \-[LIKE] BinaryLogicOperatorNode: &apos;like&apos;
+          +-[DOT] DotNode: &apos;homeaddres0_.street&apos; {propertyName=street,dereferenceType=ALL,propertyPath=street,path=a.street,tableAlias=homeaddres0_,className=com.restproject.domain.HomeAddress,classAlias=a}
+          |  +-[ALIAS_REF] IdentNode: &apos;homeaddres0_.ID&apos; {alias=a, className=com.restproject.domain.HomeAddress, tableAlias=homeaddres0_}
+          |  \-[IDENT] IdentNode: &apos;street&apos; {originalText=street}
+          \-[PARAM] ParameterNode: &apos;?&apos; {ordinal=0, expectedType=org.hibernate.type.StringType@1a8ffd20}
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -&gt; statement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---&gt; selectStatement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- selectClause
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; from (from [FROM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; fromTable (address homeaddres0_ [FROM_FRAGMENT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- fromTable
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- from
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; whereExpr (like [LIKE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; booleanExpr (like [LIKE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; comparisonExpr (like [LIKE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; exoticComparisonExpression (like [LIKE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (homeaddres0_.street [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (homeaddres0_.street [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; addrExpr (homeaddres0_.street [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- parameter
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; likeEscape (???)
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- likeEscape
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- exoticComparisonExpression
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- comparisonExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- booleanExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- whereExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;- statement
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:241 - HQL: from com.restproject.domain.HomeAddress a where a.street like ?
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:242 - SQL: select homeaddres0_.ID as ID10_, homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ from address homeaddres0_ where homeaddres0_.street like ?
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HQLQueryPlan:293 - HQL param location recognition took 0 mills (from HomeAddress a where a.street like ?)
+2015-10-01 00:44:23 TRACE QueryPlanCache:122 - unable to locate HQL query plan in cache; generating (from HomeAddress a where a.zipCode=?)
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:272 - parse() - HQL: from com.restproject.domain.HomeAddress a where a.zipCode=?
+2015-10-01 00:44:23 TRACE HqlParser:89 - -&gt; statement
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---&gt; selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----&gt; queryRule
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; fromClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; fromRange
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; path
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; asAlias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; alias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- alias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- asAlias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- fromRange
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- fromClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; whereClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; expression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------&gt; relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------- relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------&gt; relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------- relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- expression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- whereClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----- queryRule
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:291 - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    +-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+    |  \-[FROM] Node: &apos;from&apos;
+    |     \-[RANGE] Node: &apos;RANGE&apos;
+    |        +-[DOT] Node: &apos;.&apos;
+    |        |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  |  +-[IDENT] Node: &apos;com&apos;
+    |        |  |  |  \-[IDENT] Node: &apos;restproject&apos;
+    |        |  |  \-[IDENT] Node: &apos;domain&apos;
+    |        |  \-[IDENT] Node: &apos;HomeAddress&apos;
+    |        \-[ALIAS] Node: &apos;a&apos;
+    \-[WHERE] Node: &apos;where&apos;
+       \-[EQ] Node: &apos;=&apos;
+          +-[DOT] Node: &apos;.&apos;
+          |  +-[IDENT] Node: &apos;a&apos;
+          |  \-[IDENT] Node: &apos;zipCode&apos;
+          \-[PARAM] Node: &apos;?&apos;
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -&gt; statement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---&gt; selectStatement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----&gt; query (query [QUERY])
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:111 - select &lt;&lt; begin [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; fromClause (from [FROM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; fromElementList (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; fromElement (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; path (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; identifier (restproject [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; identifier (domain [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; identifier (HomeAddress [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- path
+2015-10-01 00:44:23 DEBUG FromElement:157 - FromClause{level=1} :  com.restproject.domain.HomeAddress (a) -&gt; homeaddres0_
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- fromElement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- fromElementList
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- fromClause
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; whereClause (where [WHERE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; logicalExpr (= [EQ])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; comparisonExpr (= [EQ])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; exprOrSubquery (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; expr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; addrExpr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; addrExprLhs (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; addrExpr (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------------&gt; identifier (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------------- identifier
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a -&gt; homeaddres0_.ID
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- addrExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- addrExprLhs
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; propertyName (zipCode [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (zipCode [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- propertyName
+2015-10-01 00:44:23 TRACE FromElement:626 - handling property dereference [com.restproject.domain.HomeAddress (a) -&gt; zipCode (class)]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 DEBUG DotNode:613 - getDataType() : zipCode -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a.zipCode -&gt; homeaddres0_.zip_code
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- exprOrSubquery
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; exprOrSubquery (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- parameter
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- exprOrSubquery
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- comparisonExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- logicalExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- whereClause
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:117 - select : finishing up [level=1, statement=select]
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:625 - processQuery() :  ( SELECT ( FromClause{level=1} address homeaddres0_ ) ( where ( = ( homeaddres0_.zip_code homeaddres0_.ID zipCode ) ? ) ) )
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:868 - Derived SELECT clause created.
+2015-10-01 00:44:23 DEBUG JoinProcessor:179 - Using FROM fragment [address homeaddres0_]
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:123 - select &gt;&gt; end [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----- query
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:258 - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (address)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;homeaddres0_.ID as ID10_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_&apos;
+    +-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[a], fromElementByTableAlias=[homeaddres0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: &apos;address homeaddres0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}
+    \-[WHERE] SqlNode: &apos;where&apos;
+       \-[EQ] BinaryLogicOperatorNode: &apos;=&apos;
+          +-[DOT] DotNode: &apos;homeaddres0_.zip_code&apos; {propertyName=zipCode,dereferenceType=ALL,propertyPath=zipCode,path=a.zipCode,tableAlias=homeaddres0_,className=com.restproject.domain.HomeAddress,classAlias=a}
+          |  +-[ALIAS_REF] IdentNode: &apos;homeaddres0_.ID&apos; {alias=a, className=com.restproject.domain.HomeAddress, tableAlias=homeaddres0_}
+          |  \-[IDENT] IdentNode: &apos;zipCode&apos; {originalText=zipCode}
+          \-[PARAM] ParameterNode: &apos;?&apos; {ordinal=0, expectedType=org.hibernate.type.StringType@1a8ffd20}
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -&gt; statement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---&gt; selectStatement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- selectClause
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; from (from [FROM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; fromTable (address homeaddres0_ [FROM_FRAGMENT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- fromTable
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- from
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; whereExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; booleanExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; comparisonExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; binaryComparisonExpression (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (homeaddres0_.zip_code [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (homeaddres0_.zip_code [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; addrExpr (homeaddres0_.zip_code [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- parameter
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- binaryComparisonExpression
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- comparisonExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- booleanExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- whereExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;- statement
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:241 - HQL: from com.restproject.domain.HomeAddress a where a.zipCode=?
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:242 - SQL: select homeaddres0_.ID as ID10_, homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ from address homeaddres0_ where homeaddres0_.zip_code=?
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HQLQueryPlan:293 - HQL param location recognition took 0 mills (from HomeAddress a where a.zipCode=?)
+2015-10-01 00:44:23 TRACE QueryPlanCache:122 - unable to locate HQL query plan in cache; generating (from HomeAddress a)
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:272 - parse() - HQL: from com.restproject.domain.HomeAddress a
+2015-10-01 00:44:23 TRACE HqlParser:89 - -&gt; statement
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---&gt; selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----&gt; queryRule
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; fromClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; fromRange
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; path
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; asAlias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; alias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- alias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- asAlias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- fromRange
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- fromClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----- queryRule
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:291 - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    \-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+       \-[FROM] Node: &apos;from&apos;
+          \-[RANGE] Node: &apos;RANGE&apos;
+             +-[DOT] Node: &apos;.&apos;
+             |  +-[DOT] Node: &apos;.&apos;
+             |  |  +-[DOT] Node: &apos;.&apos;
+             |  |  |  +-[IDENT] Node: &apos;com&apos;
+             |  |  |  \-[IDENT] Node: &apos;restproject&apos;
+             |  |  \-[IDENT] Node: &apos;domain&apos;
+             |  \-[IDENT] Node: &apos;HomeAddress&apos;
+             \-[ALIAS] Node: &apos;a&apos;
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -&gt; statement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---&gt; selectStatement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----&gt; query (query [QUERY])
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:111 - select &lt;&lt; begin [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; fromClause (from [FROM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; fromElementList (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; fromElement (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; path (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; identifier (restproject [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; identifier (domain [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; identifier (HomeAddress [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- path
+2015-10-01 00:44:23 DEBUG FromElement:157 - FromClause{level=1} :  com.restproject.domain.HomeAddress (a) -&gt; homeaddres0_
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- fromElement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- fromElementList
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- fromClause
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:117 - select : finishing up [level=1, statement=select]
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:625 - processQuery() :  ( SELECT ( FromClause{level=1} address homeaddres0_ ) )
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:868 - Derived SELECT clause created.
+2015-10-01 00:44:23 DEBUG JoinProcessor:179 - Using FROM fragment [address homeaddres0_]
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:123 - select &gt;&gt; end [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----- query
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:258 - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (address)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;homeaddres0_.ID as ID10_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_&apos;
+    \-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[a], fromElementByTableAlias=[homeaddres0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: &apos;address homeaddres0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=address,tableAlias=homeaddres0_,origin=null,columns={,className=com.restproject.domain.HomeAddress}}
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -&gt; statement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---&gt; selectStatement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.ID as ID10_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- selectClause
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; from (from [FROM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; fromTable (address homeaddres0_ [FROM_FRAGMENT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- fromTable
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- from
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;- statement
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:241 - HQL: from com.restproject.domain.HomeAddress a
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:242 - SQL: select homeaddres0_.ID as ID10_, homeaddres0_.country_fk as country4_10_, homeaddres0_.street as street10_, homeaddres0_.zip_code as zip3_10_ from address homeaddres0_
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HQLQueryPlan:293 - HQL param location recognition took 0 mills (from HomeAddress a)
+2015-10-01 00:44:23 TRACE QueryPlanCache:122 - unable to locate HQL query plan in cache; generating (from HomeStatsAllYears a)
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:272 - parse() - HQL: from com.restproject.domain.HomeStatsAllYears a
+2015-10-01 00:44:23 TRACE HqlParser:89 - -&gt; statement
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---&gt; selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----&gt; queryRule
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; fromClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; fromRange
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; path
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; asAlias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; alias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- alias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- asAlias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- fromRange
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- fromClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----- queryRule
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:291 - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    \-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+       \-[FROM] Node: &apos;from&apos;
+          \-[RANGE] Node: &apos;RANGE&apos;
+             +-[DOT] Node: &apos;.&apos;
+             |  +-[DOT] Node: &apos;.&apos;
+             |  |  +-[DOT] Node: &apos;.&apos;
+             |  |  |  +-[IDENT] Node: &apos;com&apos;
+             |  |  |  \-[IDENT] Node: &apos;restproject&apos;
+             |  |  \-[IDENT] Node: &apos;domain&apos;
+             |  \-[IDENT] Node: &apos;HomeStatsAllYears&apos;
+             \-[ALIAS] Node: &apos;a&apos;
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -&gt; statement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---&gt; selectStatement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----&gt; query (query [QUERY])
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:111 - select &lt;&lt; begin [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; fromClause (from [FROM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; fromElementList (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; fromElement (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; path (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; identifier (restproject [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; identifier (domain [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; identifier (HomeStatsAllYears [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- path
+2015-10-01 00:44:23 DEBUG FromElement:157 - FromClause{level=1} :  com.restproject.domain.HomeStatsAllYears (a) -&gt; homestatsa0_
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- fromElement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- fromElementList
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- fromClause
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:117 - select : finishing up [level=1, statement=select]
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:625 - processQuery() :  ( SELECT ( FromClause{level=1} HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_ ) )
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:868 - Derived SELECT clause created.
+2015-10-01 00:44:23 DEBUG JoinProcessor:179 - Using FROM fragment [HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_]
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:123 - select &gt;&gt; end [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----- query
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:258 - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (HOME_STATS_ALL_YEARS_VIEW_2)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;homestatsa0_.ID as ID12_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=HOME_STATS_ALL_YEARS_VIEW_2,tableAlias=homestatsa0_,origin=null,columns={,className=com.restproject.domain.HomeStatsAllYears}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_&apos;
+    \-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[a], fromElementByTableAlias=[homestatsa0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: &apos;HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=HOME_STATS_ALL_YEARS_VIEW_2,tableAlias=homestatsa0_,origin=null,columns={,className=com.restproject.domain.HomeStatsAllYears}}
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -&gt; statement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---&gt; selectStatement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- selectClause
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; from (from [FROM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; fromTable (HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_ [FROM_FRAGMENT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- fromTable
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- from
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;- statement
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:241 - HQL: from com.restproject.domain.HomeStatsAllYears a
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:242 - SQL: select homestatsa0_.ID as ID12_, homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ from HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HQLQueryPlan:293 - HQL param location recognition took 1 mills (from HomeStatsAllYears a)
+2015-10-01 00:44:23 TRACE QueryPlanCache:122 - unable to locate HQL query plan in cache; generating (from HomeStatsAllYears a where a.player=?)
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:272 - parse() - HQL: from com.restproject.domain.HomeStatsAllYears a where a.player=?
+2015-10-01 00:44:23 TRACE HqlParser:89 - -&gt; statement
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---&gt; selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----&gt; queryRule
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; fromClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; fromRange
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; path
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; asAlias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; alias
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- alias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- asAlias
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- fromClassOrOuterQueryPath
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- fromRange
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- fromClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- selectFrom
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------&gt; whereClause
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------&gt; logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------&gt; expression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------&gt; logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------&gt; logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------&gt; negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------&gt; equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------&gt; relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------------&gt; identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------------- identifier
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- identPrimary
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------- relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------&gt; relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------&gt; concatenation
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------&gt; additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------&gt; multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------&gt; unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -------------------------------&gt; atom
+2015-10-01 00:44:23 TRACE HqlParser:89 - ---------------------------------&gt; primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:89 - -----------------------------------&gt; parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------------- parameter
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------------- primaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------------- atom
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------------- unaryExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------------- multiplyExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------------- additiveExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------------- concatenation
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------------- relationalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------------- equalityExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------------- negatedExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------------- logicalAndExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------------- logicalOrExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----------- expression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--------- logicalExpression
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;------- whereClause
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;----- queryRule
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlParser:99 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:291 - --- HQL AST ---
+ \-[QUERY] Node: &apos;query&apos;
+    +-[SELECT_FROM] Node: &apos;SELECT_FROM&apos;
+    |  \-[FROM] Node: &apos;from&apos;
+    |     \-[RANGE] Node: &apos;RANGE&apos;
+    |        +-[DOT] Node: &apos;.&apos;
+    |        |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  +-[DOT] Node: &apos;.&apos;
+    |        |  |  |  +-[IDENT] Node: &apos;com&apos;
+    |        |  |  |  \-[IDENT] Node: &apos;restproject&apos;
+    |        |  |  \-[IDENT] Node: &apos;domain&apos;
+    |        |  \-[IDENT] Node: &apos;HomeStatsAllYears&apos;
+    |        \-[ALIAS] Node: &apos;a&apos;
+    \-[WHERE] Node: &apos;where&apos;
+       \-[EQ] Node: &apos;=&apos;
+          +-[DOT] Node: &apos;.&apos;
+          |  +-[IDENT] Node: &apos;a&apos;
+          |  \-[IDENT] Node: &apos;player&apos;
+          \-[PARAM] Node: &apos;?&apos;
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -&gt; statement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---&gt; selectStatement (query [QUERY])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----&gt; query (query [QUERY])
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:111 - select &lt;&lt; begin [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; fromClause (from [FROM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; fromElementList (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; fromElement (RANGE [RANGE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; path (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; path (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (com [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; identifier (restproject [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; identifier (domain [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- path
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; identifier (HomeStatsAllYears [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- path
+2015-10-01 00:44:23 DEBUG FromElement:157 - FromClause{level=1} :  com.restproject.domain.HomeStatsAllYears (a) -&gt; homestatsa0_
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- fromElement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- fromElementList
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- fromClause
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------&gt; whereClause (where [WHERE])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------&gt; logicalExpr (= [EQ])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------&gt; comparisonExpr (= [EQ])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; exprOrSubquery (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; expr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; addrExpr (. [DOT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; addrExprLhs (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; addrExpr (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------------&gt; identifier (a [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------------- identifier
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a -&gt; homestatsa0_.ID
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- addrExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- addrExprLhs
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------------&gt; propertyName (player [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------------&gt; identifier (player [IDENT])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------------- identifier
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------------- propertyName
+2015-10-01 00:44:23 TRACE FromElement:626 - handling property dereference [com.restproject.domain.HomeStatsAllYears (a) -&gt; player (class)]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 DEBUG DotNode:613 - getDataType() : player -&gt; org.hibernate.type.StringType@1a8ffd20
+2015-10-01 00:44:23 DEBUG FromReferenceNode:74 - Resolved :  a.player -&gt; homestatsa0_.PLAYER
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- exprOrSubquery
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -------------&gt; exprOrSubquery (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - ---------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:196 - -----------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------------- parameter
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------------- expr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------------- exprOrSubquery
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----------- comparisonExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--------- logicalExpr
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;------- whereClause
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:117 - select : finishing up [level=1, statement=select]
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:625 - processQuery() :  ( SELECT ( FromClause{level=1} HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_ ) ( where ( = ( homestatsa0_.PLAYER homestatsa0_.ID player ) ? ) ) )
+2015-10-01 00:44:23 DEBUG HqlSqlWalker:868 - Derived SELECT clause created.
+2015-10-01 00:44:23 DEBUG JoinProcessor:179 - Using FROM fragment [HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_]
+2015-10-01 00:44:23 DEBUG HqlSqlBaseWalker:123 - select &gt;&gt; end [level=1, statement=select]
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;----- query
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE HqlSqlWalker:212 - &lt;- statement
+2015-10-01 00:44:23 DEBUG AST:258 - --- SQL AST ---
+ \-[SELECT] QueryNode: &apos;SELECT&apos;  querySpaces (HOME_STATS_ALL_YEARS_VIEW_2)
+    +-[SELECT_CLAUSE] SelectClause: &apos;{derived select clause}&apos;
+    |  +-[SELECT_EXPR] SelectExpressionImpl: &apos;homestatsa0_.ID as ID12_&apos; {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=HOME_STATS_ALL_YEARS_VIEW_2,tableAlias=homestatsa0_,origin=null,columns={,className=com.restproject.domain.HomeStatsAllYears}}}
+    |  \-[SQL_TOKEN] SqlFragment: &apos;homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_&apos;
+    +-[FROM] FromClause: &apos;from&apos; FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[a], fromElementByTableAlias=[homestatsa0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: &apos;HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_&apos; FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=a,role=null,tableName=HOME_STATS_ALL_YEARS_VIEW_2,tableAlias=homestatsa0_,origin=null,columns={,className=com.restproject.domain.HomeStatsAllYears}}
+    \-[WHERE] SqlNode: &apos;where&apos;
+       \-[EQ] BinaryLogicOperatorNode: &apos;=&apos;
+          +-[DOT] DotNode: &apos;homestatsa0_.PLAYER&apos; {propertyName=player,dereferenceType=ALL,propertyPath=player,path=a.player,tableAlias=homestatsa0_,className=com.restproject.domain.HomeStatsAllYears,classAlias=a}
+          |  +-[ALIAS_REF] IdentNode: &apos;homestatsa0_.ID&apos; {alias=a, className=com.restproject.domain.HomeStatsAllYears, tableAlias=homestatsa0_}
+          |  \-[IDENT] IdentNode: &apos;player&apos; {originalText=player}
+          \-[PARAM] ParameterNode: &apos;?&apos; {ordinal=0, expectedType=org.hibernate.type.StringType@1a8ffd20}
+
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -&gt; statement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---&gt; selectStatement (SELECT [SELECT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; selectClause ({derived select clause} [SELECT_CLAUSE])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homestatsa0_.ID as ID12_ [SELECT_EXPR])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; selectColumn (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; selectExpr (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; selectAtom (homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ [SQL_TOKEN])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- selectAtom
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- selectExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- selectColumn
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- selectClause
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; from (from [FROM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; fromTable (HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_ [FROM_FRAGMENT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- fromTable
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- from
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----&gt; whereExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------&gt; booleanExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------&gt; comparisonExpr (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------&gt; binaryComparisonExpression (= [EQ])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (homestatsa0_.PLAYER [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (homestatsa0_.PLAYER [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; addrExpr (homestatsa0_.PLAYER [DOT])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- addrExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -------------&gt; expr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - ---------------&gt; simpleExpr (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:92 - -----------------&gt; parameter (? [PARAM])
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------------- parameter
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------------- simpleExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------------- expr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----------- binaryComparisonExpression
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--------- comparisonExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;------- booleanExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;----- whereExpr
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;--- selectStatement
+2015-10-01 00:44:23 TRACE SqlGenerator:108 - &lt;- statement
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:241 - HQL: from com.restproject.domain.HomeStatsAllYears a where a.player=?
+2015-10-01 00:44:23 DEBUG QueryTranslatorImpl:242 - SQL: select homestatsa0_.ID as ID12_, homestatsa0_.AWAY_AVG as AWAY2_12_, homestatsa0_.Away_Games as Away3_12_, homestatsa0_.HOME_AVG as HOME4_12_, homestatsa0_.Home_Games as Home5_12_, homestatsa0_.PLAYER as PLAYER12_ from HOME_STATS_ALL_YEARS_VIEW_2 homestatsa0_ where homestatsa0_.PLAYER=?
+2015-10-01 00:44:23 DEBUG ErrorCounter:91 - throwQueryException() : no errors
+2015-10-01 00:44:23 TRACE HQLQueryPlan:293 - HQL param location recognition took 0 mills (from HomeStatsAllYears a where a.player=?)
+2015-10-01 00:44:24 TRACE ConnectionManager:398 - connection already null in cleanup : no action
+2015-10-01 00:44:24 INFO  DAOProxyFactory:46 - cleanup dao proxy
+2015-10-01 00:44:24 INFO  LocalContainerEntityManagerFactoryBean:406 - Closing JPA EntityManagerFactory for persistence unit &apos;restProjectPU&apos;
+2015-10-01 00:44:24 INFO  LocalContainerEntityManagerFactoryBean:406 - Closing JPA EntityManagerFactory for persistence unit &apos;restProjectPU&apos;
+2015-10-01 00:44:24 INFO  SessionFactoryImpl:927 - closing
+2015-10-01 00:44:24 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5830118] to prepare test instance [com.restproject.jms.EmbeddedActiveMQTest@5bbcd17b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;playerHomeStatsResource&apos;: Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 47 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 49 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:638)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:282)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:445)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 60 more
+2015-10-01 00:44:24 ERROR TestContextManager:329 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5830118] to prepare test instance [com.restproject.jms.EmbeddedActiveMQTest@5bbcd17b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:326)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;playerHomeStatsResource&apos;: Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 31 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.restproject.service.HomeStatsAllYearsServiceImp com.restproject.resource.PlayerHomeStatsResourceImpl.homeStatsAllYearsService; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 47 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;HomeStatsAllYears&apos;: Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 49 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named &apos;homeStatsAllYearsDAO&apos; is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:638)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:282)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:445)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 60 more
+</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,14 @@
+100.12.28.216 - - [03/Oct/2015:08:54:30 -0400] "GET /draftking/services/Playerhomestats HTTP/1.1" 404 - http-bio-8181-exec-4 219
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:08:54:46 -0400] "GET /draftking/services/Playerhomestats/Aaron%20Rodgers HTTP/1.1" 404 - http-bio-8181-exec-8 75
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:01:10 -0400] "GET /draftking/services/Playerhomestats/Aaron%20Rodgers HTTP/1.1" 404 - http-bio-8181-exec-1 411
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:01:26 -0400] "GET /draftking/services/Playerhomestats/Aaron%20Rodgers HTTP/1.1" 404 - http-bio-8181-exec-2 91
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:02:05 -0400] "GET /draftking/services/Playerhomestats/Aaron%20Rodgers HTTP/1.1" 404 - http-bio-8181-exec-3 80
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:02:24 -0400] "GET /draftking/services/Playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-4 80
+100.12.28.216 - - [03/Oct/2015:09:03:03 -0400] "GET /draftking/services/Playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-7 75
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:04:14 -0400] "GET /draftking/services/login HTTP/1.1" 404 - http-bio-8181-exec-9 107
+0:0:0:0:0:0:0:1 - - [03/Oct/2015:09:05:54 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-1 12236
+100.12.28.216 - - [03/Oct/2015:09:07:14 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-3 6256
+108.54.120.105 - - [03/Oct/2015:09:18:54 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-7 5480
+108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-7 0
+108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-6 0
+108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-10 0
