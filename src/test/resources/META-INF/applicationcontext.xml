@@ -15,7 +15,7 @@
  
  <aop:config proxy-target-class="true" />
 <context:annotation-config />
-    <context:component-scan base-package="com.idodevjobs,com.restproject" />
+    <context:component-scan base-package="com.idodevjobs,com.draftking" />
  
   <import resource="classpath:META-INF/cxf/cxf.xml" />
   
@@ -85,24 +85,24 @@
 <property name="sessionFactory" ref="sessionFactory" /> 
  </bean>
 -->
-<bean id="daoProxyFactory" class="com.restproject.dao.DAOProxyFactory" destroy-method="cleanup">
+<bean id="daoProxyFactory" class="com.draftking.dao.DAOProxyFactory" destroy-method="cleanup">
 </bean>
 <!-- homeAddress DAO -->
 <bean id="homeAddressDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
-<constructor-arg type="java.lang.Class" value="com.restproject.dao.AddressDAO"></constructor-arg>
-<constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeAddress"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.draftking.dao.AddressDAO"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeAddress"></constructor-arg>
 <!--  
 <constructor-arg name="daoInterface" value="webproject.dao.AddressDAO"/>
 <constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/>
 -->
 </bean>
 <bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
-<constructor-arg type="java.lang.Class" value="com.restproject.dao.HomeStatsAllYearsDAO"></constructor-arg>
-<constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeStatsAllYears"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.draftking.dao.HomeStatsAllYearsDAO"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeStatsAllYears"></constructor-arg>
 </bean>
 
 
-	    <bean id="homeAddressResource" class="com.restproject.resource.HomeAddressResourceImpl">
+	    <bean id="homeAddressResource" class="com.draftking.resource.HomeAddressResourceImpl">
 	    </bean>
  
     <jaxrs:server id="exampleCxfServer" address="/">
