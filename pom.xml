@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>rest-project</groupId>
-	<artifactId>rest-project</artifactId>
+	<groupId>draftking</groupId>
+	<artifactId>draftking</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rest-example Maven Webapp</name>
+	<name>draftking model app</name>
 	<url>http://maven.apache.org</url>
 
 
@@ -209,11 +209,8 @@
 		</dependency>
 
 		<!-- activemq -->
-		<!--  dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-all</artifactId>
-			<version>${activemq.version}</version>
-		</dependency-->
+		<!-- dependency> <groupId>org.apache.activemq</groupId> <artifactId>activemq-all</artifactId> 
+			<version>${activemq.version}</version> </dependency -->
 		<!-- activemq -->
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
@@ -246,8 +243,11 @@
 					<version>2.2</version>
 					<configuration>
 						<url>http://localhost:8181/manager/text</url>
-						<server>mytomcat</server>
-						<path>/rest-project</path>
+						<server>Tomcatserver</server>
+						<port>8181</port>
+						<path>/draftking</path>
+						<username>admin</username>
+						<password>admin</password>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -263,7 +263,7 @@
 							<configuration>
 								<!-- <port>${test.server.port}</port> -->
 								<port>8181</port>
-								<path>/jaxrs-service</path>
+								<path>/draftking</path>
 								<fork>true</fork>
 								<useSeparateTomcatClassLoader>true</useSeparateTomcatClassLoader>
 							</configuration>
@@ -275,7 +275,7 @@
 							</goals>
 							<phase>post-integration-test</phase>
 							<configuration>
-								<path>/jaxrs-service</path>
+								<path>/draftking</path>
 							</configuration>
 						</execution>
 					</executions>
@@ -292,6 +292,6 @@
 		</pluginManagement>
 
 
-		<finalName>rest-project</finalName>
+		<finalName>draftking</finalName>
 	</build>
 </project>
