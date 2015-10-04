@@ -3,10 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	 <context-param> 
-	 <param-name>contextConfigLocation</param-name> 
-	 <param-value>/WEB-INF/applicationcontext.xml</param-value> 
-		</context-param> 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<!-- param-value>/WEB-INF/mvc-dispatcher-servlet.xml,/WEB-INF/securitycontext.xml</param-value-->
+		<param-value>/WEB-INF/applicationcontext.xml,/WEB-INF/securitycontext.xml</param-value>
+	</context-param>
+
 		<listener> 
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
 		</listener> 
@@ -20,12 +22,7 @@
 	<display-name>Draftking Application</display-name>
 
 
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<!-- param-value>/WEB-INF/mvc-dispatcher-servlet.xml,/WEB-INF/securitycontext.xml</param-value-->
-		<param-value>/WEB-INF/applicationcontext.xml,/WEB-INF/securitycontext.xml</param-value>
-	</context-param>
-
+	
 	<!-- Enables Spring Security -->
 	<!-- (springSecurityFilterChain) merely delegates the request to Spring 
 		security framework where the security tasks defined will be handled by security 
