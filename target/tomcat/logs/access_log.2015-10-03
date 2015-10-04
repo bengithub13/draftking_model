@@ -12,3 +12,13 @@
 108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-7 0
 108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-6 0
 108.54.120.105 - - [03/Oct/2015:09:18:55 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-10 0
+100.12.28.216 - - [03/Oct/2015:23:32:57 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-2 6483
+100.12.28.216 - - [03/Oct/2015:23:36:11 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-3 5659
+100.12.28.216 - - [03/Oct/2015:23:41:30 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-9 5571
+100.12.28.216 - - [03/Oct/2015:23:46:49 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-10 5174
+100.12.28.216 - - [03/Oct/2015:23:48:00 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-4 5380
+100.12.28.216 - - [03/Oct/2015:23:49:06 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-5 5962
+100.12.28.216 - - [03/Oct/2015:23:49:07 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-5 0
+100.12.28.216 - - [03/Oct/2015:23:49:07 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-5 0
+100.12.28.216 - - [03/Oct/2015:23:53:21 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-8 6389
+100.12.28.216 - - [03/Oct/2015:23:53:27 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-8 2307
