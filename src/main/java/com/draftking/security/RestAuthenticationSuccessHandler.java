@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
  
-@Component
+@Component("RestAuthenticationSuccessHandler")
 public class RestAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
  
     @Override
