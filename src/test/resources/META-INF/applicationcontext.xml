@@ -90,7 +90,7 @@
 <!-- homeAddress DAO -->
 <bean id="homeAddressDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
 <constructor-arg type="java.lang.Class" value="com.draftking.dao.AddressDAO"></constructor-arg>
-<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeAddress"></constructor-arg>
+<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeAddress2"></constructor-arg>
 <!--  
 <constructor-arg name="daoInterface" value="webproject.dao.AddressDAO"/>
 <constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/>
@@ -101,13 +101,13 @@
 <constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeStatsAllYears"></constructor-arg>
 </bean>
 
-
-	    <bean id="homeAddressResource" class="com.draftking.resource.HomeAddressResourceImpl">
+ <bean id="PlayerHomeStatsResource" class="com.draftking.resource.PlayerHomeStatsResourceImpl">
 	    </bean>
+	  
  
     <jaxrs:server id="exampleCxfServer" address="/">
         <jaxrs:serviceBeans>
-           <ref bean="homeAddressResource"/>
+         <ref bean="playerHomeStatsResource"/>
         </jaxrs:serviceBeans>
         <jaxrs:extensionMappings>
             <entry key="json" value="application/json"/>

@@ -34,7 +34,7 @@
  
  <aop:config proxy-target-class="true" />
 <context:annotation-config />
-    <context:component-scan base-package="com.idodevjobs,com.restproject" />
+    <context:component-scan base-package="com.idodevjobs,com.draftking" />
  
 
 	<tx:annotation-driven transaction-manager="transactionManager"/>
@@ -109,28 +109,23 @@
 		<property name="dataSource" ref="myDataSource" />
 	</bean>
 
-<bean id="daoProxyFactory" class="com.restproject.dao.DAOProxyFactory" destroy-method="cleanup">
+<bean id="daoProxyFactory" class="com.draftking.dao.DAOProxyFactory" destroy-method="cleanup">
 </bean>
 <!-- homeAddress DAO -->
-<bean id="homeAddressDAO" factory-bean="daoProxyFactory" factory-method="newInstance" destroy-method="cleanup">
 
-<constructor-arg type="java.lang.Class" value="com.restproject.dao.AddressDAO"></constructor-arg>
-<constructor-arg type="java.lang.Class" value="com.restproject.domain.HomeAddress"></constructor-arg>
-<!--  
-<constructor-arg name="daoInterface" value="webproject.dao.AddressDAO"/>
-<constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/>
--->
-</bean>
 
 <!--  spring will looks for /WEB-INF/pages instead of /pages -->    
 <!--      <mvc:resources mapping="/css/**" location="/WEB-INF/pages/" />
     -->
-	    <bean id="homeAddressResource" class="com.restproject.resource.HomeAddressResourceImpl">
+	     <bean id="PlayerHomeStatsResource" class="com.draftking.resource.PlayerHomeStatsResourceImpl">
 	    </bean>
  
     <jaxrs:server id="exampleCxfServer" address="/">
         <jaxrs:serviceBeans>
-        <ref bean="homeAddressResource"/>
+        <ref bean="playerHomeStatsResource"/>
+	 
+ 
+       
             
         </jaxrs:serviceBeans>
         <jaxrs:extensionMappings>

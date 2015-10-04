@@ -7,10 +7,10 @@
 
   <persistence-unit name="restProjectPU" transaction-type="RESOURCE_LOCAL">
    <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>com.restproject.domain.Country</class>
-    <class>com.restproject.domain.HomeAddress</class>
-    <class>com.restproject.domain.Owner</class>
-    <class>com.restproject.domain.HomeStatsAllYears</class>
+    <class>com.draftking.domain.Country2</class>
+    <class>com.draftking.domain.HomeAddress2</class>
+    <class>com.draftking.domain.Owner2</class>
+    <class>com.draftking.domain.HomeStatsAllYears</class>
   
 
     <properties>
