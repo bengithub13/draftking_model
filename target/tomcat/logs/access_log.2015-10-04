@@ -1,0 +1,13 @@
+100.12.28.216 - - [04/Oct/2015:00:19:14 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-4 4910
+100.12.28.216 - - [04/Oct/2015:00:19:14 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-2 5245
+100.12.28.216 - - [04/Oct/2015:00:20:13 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-4 4593
+100.12.28.216 - - [04/Oct/2015:00:21:07 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 46576 http-bio-8181-exec-4 4321
+100.12.28.216 - - [04/Oct/2015:00:59:37 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-2 0
+100.12.28.216 - - [04/Oct/2015:01:00:42 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-4 0
+100.12.28.216 - - [04/Oct/2015:01:13:21 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-1 0
+100.12.28.216 - - [04/Oct/2015:01:30:15 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-1 0
+100.12.28.216 - - [04/Oct/2015:01:53:37 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-1 0
+100.12.28.216 - - [04/Oct/2015:01:53:40 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-3 0
+100.12.28.216 - - [04/Oct/2015:01:54:00 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-4 0
+100.12.28.216 - - [04/Oct/2015:01:56:42 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-2 0
+0:0:0:0:0:0:0:1 - - [04/Oct/2015:01:58:24 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-4 0
