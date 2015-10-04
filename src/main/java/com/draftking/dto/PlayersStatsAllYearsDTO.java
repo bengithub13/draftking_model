@@ -24,7 +24,7 @@ public class PlayersStatsAllYearsDTO {
 		return playersStatsAllYears;
 	}
 
-	public void setOwners(List<PlayerStatsAllYearsDTO> playersStatsAllYears){
+	public void setPlayers(List<PlayerStatsAllYearsDTO> playersStatsAllYears){
 		this.playersStatsAllYears=playersStatsAllYears;
 	}
 
