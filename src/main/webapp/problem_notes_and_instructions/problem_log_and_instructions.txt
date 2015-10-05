@@ -1,4 +1,6 @@
 
+testbranch-2 added this line by branch testbranch-2
+
 run time argument in run configuration:
 -Dlog4j.configuration="file:C:\Users\BenPoon\workspace\webproject\src\test\resources\META-INF\log4j.properties.txt"
 
