@@ -16,12 +16,17 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.ContentType;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.simple.JSONObject;
@@ -31,9 +36,15 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class HttpCLientTest {
-	
-	
-	
+
+	private HttpClient client = HttpClientBuilder.create().build();
+	private Cookie jSessionIDCookie;
+	private List<Cookie> cookies;
+
+	private enum Http_Mode {
+		GET, POST
+	};
+
 	ResponseHandler<JSONObject> rh = new ResponseHandler<JSONObject>() {
 		@Override
 		public JSONObject handleResponse(final HttpResponse response)
@@ -52,9 +63,9 @@ public class HttpCLientTest {
 			Gson gson = new GsonBuilder().create();
 			ContentType contentType = ContentType.getOrDefault(entity);
 			Charset charset = contentType.getCharset();
-			if (entity.getContentLength()==0) return null;
-			Reader reader = new InputStreamReader(entity.getContent(), charset);
-			
+			if (entity.getContentLength() == 0)
+				return null;
+			Reader reader = new InputStreamReader(entity.getContent());
 			return gson.fromJson(reader, JSONObject.class);
 		}
 	};
@@ -63,20 +74,37 @@ public class HttpCLientTest {
 	public void test() {
 		String url = "http://100.12.28.216:8181/draftking/j_spring_security_check";
 		HashMap<String, String> authenticationMap = new HashMap<String, String>();
-		authenticationMap.put("j_username","benpoon");
-		authenticationMap.put("j_password","pass1");
-		http_execute(url, authenticationMap);
-		
-		//call rest endpoint	
+		authenticationMap.put("j_username", "benpoon");
+		authenticationMap.put("j_password", "pass1");
+		http_execute(url, authenticationMap, null, Http_Mode.POST);
+
 		String url2 = "http://100.12.28.216:8181/draftking/services/playerhomestats/all";
-		http_execute(url2, authenticationMap);
+		http_execute(url2, authenticationMap, jSessionIDCookie, Http_Mode.GET);
 	}
 
+	/**
+	 * This Method makes the actual http post call.
+	 * 
+	 * @param url
+	 * @param requestParameters
+	 * @param jSessionIdCookie
+	 */
+
 	private void http_execute(String url,
-			HashMap<String, String> requestParameters) {
-		HttpClient client = HttpClientBuilder.create().build();
+			HashMap<String, String> requestParameters, Cookie jSessionIdCookie,
+			Http_Mode http_mode) {
+		JSONObject jobj = null;
+
 		CookieHandler.setDefault(new CookieManager());
+		CookieStore cookieStore = new BasicCookieStore();
+		if (!(jSessionIdCookie == null)) {
+			cookieStore.addCookie(jSessionIdCookie);
+		}
+		HttpClientContext context = HttpClientContext.create();
+		context.setCookieStore(cookieStore);
+
 		HttpPost post = new HttpPost(url);
+		HttpGet get = new HttpGet(url);
 		List<BasicNameValuePair> urlParameters = new ArrayList<BasicNameValuePair>();
 		for (Map.Entry<String, String> entry : requestParameters.entrySet()) {
 			urlParameters.add(new BasicNameValuePair(entry.getKey(), entry
@@ -85,9 +113,19 @@ public class HttpCLientTest {
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(urlParameters,
 				Consts.UTF_8);
 		post.setEntity(entity);
+
 		try {
-			JSONObject jobj= client.execute(post, rh);
-			if (!(jobj==null)) System.out.print(jobj.toString()); 
+			switch (http_mode) {
+			case POST:
+				jobj = client.execute(post, rh, context);
+				break;
+			case GET:
+				jobj = client.execute(get, rh, context);
+			}
+
+			if (!(jobj == null))
+
+				System.out.print(jobj.toString());
 
 		}
 
@@ -103,6 +141,25 @@ public class HttpCLientTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		jSessionIDCookie = getJsessionIDCookie(context.getCookieStore()
+				.getCookies());
+	}
+
+	/**
+	 * this method iterates through list of cookies and extracts Jsessionid
+	 * cookie
+	 * 
+	 * @param cookieList
+	 * @return
+	 */
+
+	private Cookie getJsessionIDCookie(List<Cookie> cookieList) {
+		for (Cookie cookie : cookieList) {
+			if (cookie.getName().equals("JSESSIONID"))
+				return cookie;
+		}
+		return null;
+
 	}
 
 }
