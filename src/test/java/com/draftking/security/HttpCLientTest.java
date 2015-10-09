@@ -31,6 +31,8 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.simple.JSONObject;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -40,6 +42,7 @@ public class HttpCLientTest {
 	private HttpClient client = HttpClientBuilder.create().build();
 	private Cookie jSessionIDCookie;
 	private List<Cookie> cookies;
+	private Logger logger= LoggerFactory.getLogger(HttpCLientTest.class);
 
 	private enum Http_Mode {
 		GET, POST
@@ -123,11 +126,12 @@ public class HttpCLientTest {
 				jobj = client.execute(get, rh, context);
 			}
 
-			if (!(jobj == null))
-
-				System.out.print(jobj.toString());
-
-		}
+			if (!(jobj == null)){
+//				System.out.print(jobj.toString());
+				logger.debug("all address lookup for a zipcode");
+			
+			}
+			}
 
 		catch (HttpResponseException e) {
 			// TODO Auto-generated catch block
