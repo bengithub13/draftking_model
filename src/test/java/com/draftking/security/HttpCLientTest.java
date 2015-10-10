@@ -63,19 +63,15 @@ public class HttpCLientTest {
 				throw new ClientProtocolException(
 						"Response contains no content");
 			}
-			// use GSON to convert frpm json to java object and vice versa
+			//convert from JSON to Java objects.
 			Gson gson = new GsonBuilder().create();
-			Gson gson2 = new GsonBuilder().create();
 			ContentType contentType = ContentType.getOrDefault(entity);
 			Charset charset = contentType.getCharset();
 			if (entity.getContentLength() == 0)
 				return null;
-			
-		// test we can map json to java objects	
 			Reader reader = new InputStreamReader(entity.getContent());
 			String jsonString=gson.fromJson(reader, JSONObject.class).toJSONString();
-			
-			AllPlayersStatsJSON players= gson2.fromJson(jsonString, AllPlayersStatsJSON.class);
+			AllPlayersStatsJSON players= gson.fromJson(jsonString, AllPlayersStatsJSON.class);
 			return gson.fromJson(reader, JSONObject.class);
 		}
 	};
