@@ -34,6 +34,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.draftking.json.AllPlayersStatsJSON;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -64,11 +65,17 @@ public class HttpCLientTest {
 			}
 			// use GSON to convert frpm json to java object and vice versa
 			Gson gson = new GsonBuilder().create();
+			Gson gson2 = new GsonBuilder().create();
 			ContentType contentType = ContentType.getOrDefault(entity);
 			Charset charset = contentType.getCharset();
 			if (entity.getContentLength() == 0)
 				return null;
+			
+		// test we can map json to java objects	
 			Reader reader = new InputStreamReader(entity.getContent());
+			String jsonString=gson.fromJson(reader, JSONObject.class).toJSONString();
+			
+			AllPlayersStatsJSON players= gson2.fromJson(jsonString, AllPlayersStatsJSON.class);
 			return gson.fromJson(reader, JSONObject.class);
 		}
 	};
@@ -127,8 +134,8 @@ public class HttpCLientTest {
 			}
 
 			if (!(jobj == null)){
-//				System.out.print(jobj.toString());
-				logger.debug("all address lookup for a zipcode");
+				logger.debug(jobj.toString());
+			
 			
 			}
 			}

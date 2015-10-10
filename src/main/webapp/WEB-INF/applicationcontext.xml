@@ -14,9 +14,9 @@
                         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
  http://www.springframework.org/schema/security
 http://www.springframework.org/schema/security/spring-security-3.2sd">
-	
-	
-	
+
+
+
 	<tx:annotation-driven />
 
 	<aop:config proxy-target-class="true" />
@@ -88,26 +88,28 @@ http://www.springframework.org/schema/security/spring-security-3.2sd">
 	<bean id="daoProxyFactory" class="com.draftking.dao.DAOProxyFactory"
 		destroy-method="cleanup">
 	</bean>
-	
 
-		<bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory"
+
+	<bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory"
 		factory-method="newInstance" destroy-method="cleanup">
 
-		<constructor-arg type="java.lang.Class" value="com.draftking.dao.HomeStatsAllYearsDAO"></constructor-arg>
-		<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeStatsAllYears"></constructor-arg> 
+		<constructor-arg type="java.lang.Class"
+			value="com.draftking.dao.HomeStatsAllYearsDAO"></constructor-arg>
+		<constructor-arg type="java.lang.Class"
+			value="com.draftking.domain.HomeStatsAllYears"></constructor-arg>
 	</bean>
-	
 
 
-	
-    <bean id="playerHomeStatsResource" class="com.draftking.resource.PlayerHomeStatsResourceImpl">
+
+
+	<bean id="playerHomeStatsResource" class="com.draftking.resource.PlayerHomeStatsResourceImpl">
 	</bean>
 
 
 
 	<jaxrs:server id="exampleCxfServer" address="/">
 		<jaxrs:serviceBeans>
-	
+
 			<ref bean="playerHomeStatsResource" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
@@ -120,12 +122,12 @@ http://www.springframework.org/schema/security/spring-security-3.2sd">
 			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 		</jaxrs:providers>
 	</jaxrs:server>
-	
-	      <!-- If request parameter "targetUrl" is existed, then forward to this url --> 
-  <!-- For update login form : redirect page back to requested url after authetication-->
-  <bean id="savedRequestAwareAuthenticationSuccessHandler"
-	class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-	<property name="targetUrlParameter" value="targetUrl" />
-  </bean>
+
+	<!-- If request parameter "targetUrl" is existed, then forward to this url -->
+	<!-- For update login form : redirect page back to requested url after authetication -->
+	<bean id="savedRequestAwareAuthenticationSuccessHandler"
+		class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+		<property name="targetUrlParameter" value="targetUrl" />
+	</bean>
 
 </beans>
