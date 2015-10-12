@@ -87,15 +87,7 @@
 -->
 <bean id="daoProxyFactory" class="com.draftking.dao.DAOProxyFactory" destroy-method="cleanup">
 </bean>
-<!-- homeAddress DAO -->
-<bean id="homeAddressDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
-<constructor-arg type="java.lang.Class" value="com.draftking.dao.AddressDAO"></constructor-arg>
-<constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeAddress2"></constructor-arg>
-<!--  
-<constructor-arg name="daoInterface" value="webproject.dao.AddressDAO"/>
-<constructor-arg name="domainClass" value="webproject.domain.HomeAddress"/>
--->
-</bean>
+
 <bean id="homeStatsAllYearsDAO" factory-bean="daoProxyFactory" factory-method="newInstance" scope="prototype">
 <constructor-arg type="java.lang.Class" value="com.draftking.dao.HomeStatsAllYearsDAO"></constructor-arg>
 <constructor-arg type="java.lang.Class" value="com.draftking.domain.HomeStatsAllYears"></constructor-arg>
