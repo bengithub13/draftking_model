@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 
+import javax.persistence.FlushModeType;
 import javax.persistence.Query;
 
 import org.hibernate.Session;
@@ -133,8 +134,9 @@ public T findByID(Class<?> clazz, BigDecimal id) {
 	 */
 	@SuppressWarnings("unchecked")
 	public List<T> executeListQuery(Method method, Class<T> domainClass, Object[] queryArgs){
+	//	this.getEntityManager().clear();
 		Query queryObject=this.getEntityManager().createNamedQuery(getQueryName(method,domainClass));
-		
+		queryObject.setFlushMode(FlushModeType.AUTO);
 	//JPA queryobject doesnt not have getNamedParameters method so I can not tell if the named query is based on named parameters or
 	// postional paramters...so im just going to assume we use positional parameters for now.
 	//	if (queryObject.getNamedParameters().length==0){

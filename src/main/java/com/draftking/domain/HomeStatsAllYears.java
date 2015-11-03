@@ -1,5 +1,6 @@
 package com.draftking.domain;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 
 @Entity
+@Cacheable(false)
 @NamedQueries({
 	@NamedQuery(name="com.draftking.domain.HomeStatsAllYears.findByPlayer",query="from HomeStatsAllYears a where a.player=?"),	
 	@NamedQuery(name="com.draftking.domain.HomeStatsAllYears.findAllPlayers",query="from HomeStatsAllYears a")})

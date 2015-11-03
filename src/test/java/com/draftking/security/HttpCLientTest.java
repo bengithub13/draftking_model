@@ -86,6 +86,7 @@ public class HttpCLientTest {
 
 		String url2 = "http://100.12.28.216:8181/draftking/services/playerhomestats/all";
 		http_execute(url2, authenticationMap, jSessionIDCookie, Http_Mode.GET);
+	
 	}
 
 	/**
