@@ -1,0 +1,14 @@
+100.12.28.216 - - [27/Oct/2015:00:00:46 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 337
+100.12.28.216 - - [27/Oct/2015:00:00:46 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 41891 http-bio-8181-exec-2 379
+100.12.28.216 - - [27/Oct/2015:00:40:51 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 832
+100.12.28.216 - - [27/Oct/2015:00:40:52 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 1129
+100.12.28.216 - - [27/Oct/2015:00:46:38 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 795
+100.12.28.216 - - [27/Oct/2015:00:46:39 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 1130
+100.12.28.216 - - [27/Oct/2015:20:08:52 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 362
+100.12.28.216 - - [27/Oct/2015:20:08:53 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 421
+100.12.28.216 - - [27/Oct/2015:20:46:38 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 547
+100.12.28.216 - - [27/Oct/2015:20:46:40 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 1012
+100.12.28.216 - - [27/Oct/2015:22:40:01 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 367
+100.12.28.216 - - [27/Oct/2015:22:40:02 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 469
+100.12.28.216 - - [27/Oct/2015:22:58:36 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 360
+100.12.28.216 - - [27/Oct/2015:22:58:37 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 25465 http-bio-8181-exec-2 457

@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [22/Oct/2015:23:06:20 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 302 - http-bio-8181-exec-1 320
+0:0:0:0:0:0:0:1 - - [22/Oct/2015:23:06:20 -0400] "GET /draftking/spring_security_login;jsessionid=6DFF7963F9CFEFC4D8AE89CEBA299CCD HTTP/1.1" 200 498 http-bio-8181-exec-3 30
+0:0:0:0:0:0:0:1 - - [22/Oct/2015:23:06:20 -0400] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8181-exec-4 0
+0:0:0:0:0:0:0:1 - - [22/Oct/2015:23:06:29 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-5 745
+0:0:0:0:0:0:0:1 - - [22/Oct/2015:23:06:57 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-6 18183
+100.12.28.216 - - [22/Oct/2015:23:10:34 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 31
+100.12.28.216 - - [22/Oct/2015:23:10:49 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-1 14021
+100.12.28.216 - - [22/Oct/2015:23:38:13 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-5 16
+100.12.28.216 - - [22/Oct/2015:23:38:26 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-5 12874
