@@ -11,7 +11,7 @@ import com.draftking.dto.PlayersStatsAllYearsDTO;
 
 @Produces({"application/xml", "application/json"})
 public interface PlayerHomeStatsResource {
-	//http://localhost:8282/draftking/services/Playerhomestats/all
+	//http://localhost:8282/draftking/services/playerhomestats/all
 	
 	    @GET
 		@Path("/all")

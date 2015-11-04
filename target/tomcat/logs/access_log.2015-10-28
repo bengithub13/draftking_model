@@ -1,0 +1,16 @@
+100.12.28.216 - - [28/Oct/2015:00:48:01 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 308
+100.12.28.216 - - [28/Oct/2015:00:48:02 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 32921 http-bio-8181-exec-2 1429
+100.12.28.216 - - [28/Oct/2015:00:57:03 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 401
+100.12.28.216 - - [28/Oct/2015:00:57:03 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 500 32921 http-bio-8181-exec-2 496
+100.12.28.216 - - [28/Oct/2015:01:02:24 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 404 - http-bio-8181-exec-1 0
+100.12.28.216 - - [28/Oct/2015:01:02:24 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 404 - http-bio-8181-exec-2 0
+100.12.28.216 - - [28/Oct/2015:01:10:18 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 368
+100.12.28.216 - - [28/Oct/2015:01:10:27 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-2 9193
+100.12.28.216 - - [28/Oct/2015:01:11:54 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 365
+100.12.28.216 - - [28/Oct/2015:01:12:15 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-2 20619
+100.12.28.216 - - [28/Oct/2015:01:14:02 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 366
+100.12.28.216 - - [28/Oct/2015:01:14:21 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-2 18950
+100.12.28.216 - - [28/Oct/2015:01:29:28 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-1 361
+100.12.28.216 - - [28/Oct/2015:01:29:37 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73539 http-bio-8181-exec-2 9083
+100.12.28.216 - - [28/Oct/2015:23:30:24 -0400] "POST /draftking/j_spring_security_check HTTP/1.1" 200 - http-bio-8181-exec-4 30
+100.12.28.216 - - [28/Oct/2015:23:30:43 -0400] "GET /draftking/services/playerhomestats/all HTTP/1.1" 200 73543 http-bio-8181-exec-5 18979
