@@ -18,7 +18,8 @@ public class DAOProxyFactory {
 //	@Autowired
 //	private SessionFactory sessionFactory;
 //	@PersistenceContext
-	@PersistenceContext(unitName="restProjectPU", type = PersistenceContextType.EXTENDED)
+	//@PersistenceContext(unitName="restProjectPU", type = PersistenceContextType.EXTENDED)
+	@PersistenceContext(unitName="restProjectPU")
 	private EntityManager entityManager;
 	
 	
