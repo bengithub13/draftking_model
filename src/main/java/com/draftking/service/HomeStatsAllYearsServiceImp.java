@@ -26,7 +26,7 @@ public class HomeStatsAllYearsServiceImp implements HomeStatsAllYearsService {
 	
 	
 	@Transactional(rollbackFor=Exception.class)
-	@Override
+	
 	public PlayersStatsAllYearsDTO getAllYearsStats() {
 		List<HomeStatsAllYears> playersList = homeStatsAllYearsDAO
 				.findAllPlayers();
@@ -34,7 +34,7 @@ public class HomeStatsAllYearsServiceImp implements HomeStatsAllYearsService {
 	}
 
 	
-	@Override
+	
 	public PlayersStatsAllYearsDTO getAllYearsStatsByPlayer(String player) {
 		List<HomeStatsAllYears> playersList = homeStatsAllYearsDAO
 				.findByPlayer(player);

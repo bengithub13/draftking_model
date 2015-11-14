@@ -25,7 +25,7 @@ public class JmsMessageSender {
   public void send(final String text) throws JMSException{
      try{
     this.jmsTemplate.send(new MessageCreator() {
-    	@Override
+    	
       public Message createMessage(Session session) throws JMSException {
         TextMessage message = session.createTextMessage(text);
         return message;
@@ -52,7 +52,7 @@ public class JmsMessageSender {
   public void send(final Destination dest,final String text) {
      
     this.jmsTemplate.send(dest,new MessageCreator() {
-      @Override
+    
       public Message createMessage(Session session) throws JMSException {
         Message message = session.createTextMessage(text);
         return message;

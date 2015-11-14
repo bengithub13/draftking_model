@@ -14,7 +14,7 @@ import com.draftking.dao.DAOProxyFactory;
 @Service("messageListener1")
 public class JmsMessageConsumer implements MessageListener {
 
-	@Override
+	
     public void onMessage(Message message) {
         if (message instanceof TextMessage) {
             try {

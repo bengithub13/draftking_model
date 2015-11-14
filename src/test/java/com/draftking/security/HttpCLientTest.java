@@ -50,7 +50,7 @@ public class HttpCLientTest {
 	};
 
 	ResponseHandler<JSONObject> rh = new ResponseHandler<JSONObject>() {
-		@Override
+	
 		public JSONObject handleResponse(final HttpResponse response)
 				throws IOException {
 			StatusLine statusLine = response.getStatusLine();
