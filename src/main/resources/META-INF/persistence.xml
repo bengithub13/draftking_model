@@ -10,7 +10,7 @@
    <provider>org.hibernate.ejb.HibernatePersistence</provider>
  
     <class>com.draftking.domain.HomeStatsAllYears</class>
-  
+  <class>com.draftking.domain.PlayersTable</class>
 
     <properties>
         <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />

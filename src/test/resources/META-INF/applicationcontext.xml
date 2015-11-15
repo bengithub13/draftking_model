@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
-       xmlns:cxf="http://cxf.apache.org/core"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       	xmlns:aop="http://www.springframework.org/schema/aop"
-       		xmlns:tx="http://www.springframework.org/schema/tx"
-       xsi:schemaLocation="
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:batch="http://www.springframework.org/schema/batch" 
+	xsi:schemaLocation="
                         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
                        	http://www.springframework.org/schema/aop
 						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
                         http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
-                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+                        http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+						http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
                         http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
+
 
 
 
@@ -22,7 +23,57 @@
     <context:component-scan base-package="com.draftking" />
  <tx:annotation-driven transaction-manager="transactionManager"/>
   <import resource="classpath:META-INF/cxf/cxf.xml" />
-  
+  <!-- Job Repository : used to persist state of batch jobs.  We are using MapJobRepositoryFactoryBean because it does not persist meta data about job into the datbase
+	it stores the information in memory Maps
+	 -->
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+	<property name = "transactionManager" ref="transactionManager"/>
+	</bean>
+
+<!--  JOb Launcher: creates the job and the job state before launching it -->
+	<bean id ="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+	<property name="jobRepository" ref="jobRepository"/>
+	</bean>
+	
+	
+	<bean id="draftking_file_reader" class="org.springframework.batch.item.file.FlatFileItemReader"
+		scope="step">
+		<!-- <property name="resource" value="file:./sample.csv" /> -->
+		<property name="resource" value="file:///Users/BenPoon/draftking.csv" />
+
+		<property name="linesToSkip" value="1" />
+
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+
+				<property name="lineTokenizer">
+					<bean
+						class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+						<property name="names"
+							value="position,name,salary,gameInfo,avgPointsPerGame,teamAbrev" />
+					</bean>
+				</property>
+
+				<property name="fieldSetMapper">
+					<bean
+						class="com.draftking.springbatch.mapper.draftKingPlayersFieldSetMapper" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="playersTabItemWriter" class="com.draftking.springbatch.itemWriter.playersTableItemWriter">
+	</bean>
+	
+		<batch:job id="DraftKingCSVJob">
+	  <batch:step id="step1">
+		<batch:tasklet>
+			<batch:chunk reader="draftking_file_reader" writer="playersTableItemWriter" commit-interval="10">
+			</batch:chunk>
+		</batch:tasklet>
+	  </batch:step>
+	</batch:job>
+	
 
 
 	<!-- for local resource- this was fine to use. -->

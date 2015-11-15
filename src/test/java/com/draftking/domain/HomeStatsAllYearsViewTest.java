@@ -21,6 +21,10 @@ import com.draftking.domain.HomeStatsAllYears;
 	@RunWith(SpringJUnit4ClassRunner.class)
 	@Transactional
 	@ContextConfiguration(locations = { "classpath:/META-INF/applicationContext.xml" })
+	/*By extending this class, we give our methods transactional support at the class level.
+	If we did not do this, and we wanted transactional support, we would have to either annotate our methods with 
+	@Transactional or configure our transaction manager with the @TransactionConfiguration annotation.
+	*/
 	public class HomeStatsAllYearsViewTest extends AbstractTransactionalJUnit4SpringContextTests {
 		// @Autowired
 		// protected SessionFactory sessionFactory;
