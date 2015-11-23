@@ -12,7 +12,7 @@ import com.draftking.domain.PlayersTable;
 import com.draftking.springbatch.model.DraftKingCSVModel;
 
 @Component("playersTableItemWriter")
-public class playersTableItemWriter implements ItemWriter<DraftKingCSVModel>{
+public class PlayersTableItemWriter implements ItemWriter<DraftKingCSVModel>{
 //@Autowired
 
 @PersistenceContext(unitName="restProjectPU")

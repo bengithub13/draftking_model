@@ -3,12 +3,6 @@ package com.draftking.springbatch.model;
 public class DraftKingCSVModel {
 	private String position;
 	private String Name;
-	public String getName() {
-		return Name;
-	}
-	public void setName(String name) {
-		Name = name;
-	}
 	private String salary;
 	private String gameInfo;
 	private Number avgPointsPerGame;
@@ -18,6 +12,13 @@ public class DraftKingCSVModel {
 	}
 	public void setPosition(String position) {
 		this.position = position;
+	}
+	
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
 	}
 	public String getSalary() {
 		return salary;

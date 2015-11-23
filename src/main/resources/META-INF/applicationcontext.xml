@@ -28,6 +28,7 @@
 	 -->
 	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
 	<property name = "transactionManager" ref="transactionManager"/>
+	    <property name="isolationLevelForCreate" value="ISOLATION_DEFAULT"/>
 	</bean>
 
 <!--  JOb Launcher: creates the job and the job state before launching it -->
@@ -39,7 +40,10 @@
 	<bean id="draftking_file_reader" class="org.springframework.batch.item.file.FlatFileItemReader"
 		scope="step">
 		<!-- <property name="resource" value="file:./sample.csv" /> -->
-		<property name="resource" value="file:///Users/BenPoon/draftking.csv" />
+		<!-- property name="resource" value="file:///Users/BenPoon/DRAFTKING_CSV/draftking.csv" /-->
+			<property name="strict" value="false" />
+		<property name="resource" value="file:c:\Users\BenPoon\DRAFTKING_CSV\draftking.csv" />
+		
 
 		<property name="linesToSkip" value="1" />
 
@@ -51,21 +55,20 @@
 						class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
 						<property name="names"
 							value="position,name,salary,gameInfo,avgPointsPerGame,teamAbrev" />
+							<property name="delimiter" value =","/>
 					</bean>
 				</property>
 
-				<property name="fieldSetMapper">
-					<bean
-						class="com.draftking.springbatch.mapper.draftKingPlayersFieldSetMapper" />
-				</property>
+				<property name="fieldSetMapper" ref ="draftkingPlayersFieldSetMapper"/>
+				
 			</bean>
 		</property>
 	</bean>
 	
-	<bean id="playersTabItemWriter" class="com.draftking.springbatch.itemWriter.playersTableItemWriter">
+	<bean id="playersTableItemWriter" class="com.draftking.springbatch.itemWriter.PlayersTableItemWriter">
 	</bean>
 	
-		<batch:job id="DraftKingCSVJob">
+		<batch:job id="draftKingCSVJob">
 	  <batch:step id="step1">
 		<batch:tasklet>
 			<batch:chunk reader="draftking_file_reader" writer="playersTableItemWriter" commit-interval="10">
